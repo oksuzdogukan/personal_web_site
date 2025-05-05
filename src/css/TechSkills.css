@@ -1,0 +1,45 @@
+.tech-skills{
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills-title{
+    width: 90%;
+    height: 50px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(23, 21, 70, 0.62);
+    border-radius: 20px;
+}
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 30px;
+    padding: 0;
+}
+.skill{
+    width: 100px;
+    height: 100px;
+    background-color: #DAD8D8;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.skill img {
+    width: 55px;
+    height: 55px;
+    display: block;
+}
+.skill h5{
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+}

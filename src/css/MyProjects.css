@@ -1,0 +1,19 @@
+.my-projects{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my-project-title{
+    width: 90%;
+    height: 50px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(23, 21, 70, 0.62);
+    border-radius: 20px;
+}
+
+
