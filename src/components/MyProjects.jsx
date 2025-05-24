@@ -13,7 +13,7 @@ function MyProjects() {
         </div>
         
         
-          <Project/>
+          
         
     </div>
   )

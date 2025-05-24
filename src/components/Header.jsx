@@ -27,6 +27,13 @@ function Header() {
         <h1>Doğukan Öksüz</h1>
       </div>
 
+      <div className="tabs">
+        <a className="tab" href="#home">Home</a>
+        <a className="tab" href="#skills">Skills</a>
+        <a className="tab" href="#projects">Projects</a>
+        <a className="tab" href="#footer">Contact</a>
+      </div>
+
       <div className="icons">
         <FaLinkedin className="icon" onClick={handleLinkedin}/>
         <FaTwitter className="icon" onClick={handleTwitter}/>

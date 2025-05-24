@@ -7,16 +7,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Poppins";
 }
 .header-title {
   margin-left: 40px;
   cursor: pointer;
 }
 .header-title h1 {
-  font-family: "Poppins";
   font-size: 28px;
   font-weight: 500;
 } 
+.tabs {
+  display: flex;
+  gap: 50px;
+}
+
+
+
+
 .icons {
   margin-right: 40px;
   display: flex;

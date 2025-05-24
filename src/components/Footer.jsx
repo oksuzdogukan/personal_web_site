@@ -20,7 +20,7 @@ function Footer() {
 
 
   return (
-    <div className='footer'>
+    <div className='footer' id='footer'>
 
         <div className='contact'>
             <h1>About Me →</h1>

@@ -6,10 +6,10 @@ function AboutMe() {
     <div className="information">
       
       <div className="info-me">
-        <h3>Hi, I’m Doğukan.</h3>
+        <h3>Hi, I'm Doğukan.</h3>
 
         <div style={{display:'flex'}}>
-          <p>I’m a software engineering student.</p>
+          <p>I'm a software engineering student.</p>
           <img src="src\images\dogukanpng.png" alt="dogukanpng" />
         </div>
       </div>

@@ -4,7 +4,7 @@ import Skill from './Skill'
 
 function TechSkills() {
   return (
-    <div className='tech-skills'>
+    <div className='tech-skills' id='skills'>
         
           <div className='skills-title'>
               <h4>Technical Skills</h4>
