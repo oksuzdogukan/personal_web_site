@@ -1,15 +1,20 @@
 import React from 'react'
 import '../css/TechSkills.css'
-import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaJs, FaNodeJs } from "react-icons/fa";
-import { SiC, SiTailwindcss, SiVite } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt, FaGithub, FaJs, FaGitAlt, FaPython } from "react-icons/fa";
+import { SiC, SiCplusplus, SiTailwindcss } from "react-icons/si";
 
 function TechSkills() {
   const skills = [
     { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
     { name: "React", icon: <FaReact />, color: "#61DAFB" },
+    { name: "React Native", icon: <FaReact />, color: "#61DAFB" }, // Using React logo for RN
     { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
     { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
-    { name: "C Language", icon: <SiC />, color: "#A8B9CC" },
+    { name: "TailwindCSS", icon: <SiTailwindcss />, color: "#38B2AC" },
+    { name: "Python", icon: <FaPython />, color: "#3776AB" },
+    { name: "C", icon: <SiC />, color: "#A8B9CC" },
+    { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
+    { name: "Git", icon: <FaGitAlt />, color: "#F05032" },
     { name: "GitHub", icon: <FaGithub />, color: "#ffffff" },
   ];
 
