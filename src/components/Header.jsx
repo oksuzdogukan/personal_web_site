@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
 import "../css/Header.css";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleLinkedin = () => {
     window.open("https://www.linkedin.com/in/do%C4%9Fukan-%C3%B6ks%C3%BCz-144377237/", "_blank")
   }
@@ -16,31 +24,31 @@ function Header() {
   }
 
   const handleWebsite = () => {
-    window.location.href = "http://localhost:5173/";
+    window.location.href = "/";
   }
 
-
   return (
-    <div className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`} id="header">
+      <div className="header-container">
+        <div className="header-logo" onClick={handleWebsite}>
+          <h1>Doğukan<span>.</span></h1>
+        </div>
 
-      <div className="header-title" onClick={handleWebsite}>
-        <h1>Doğukan Öksüz</h1>
+        <nav className="header-nav">
+          <a className="nav-link" href="#">Home</a>
+          <a className="nav-link" href="#about">About</a>
+          <a className="nav-link" href="#skills">Skills</a>
+          <a className="nav-link" href="#projects">Projects</a>
+          <a className="nav-link" href="#footer">Contact</a>
+        </nav>
+
+        <div className="header-socials">
+          <FaLinkedin className="social-icon" onClick={handleLinkedin} aria-label="LinkedIn"/>
+          <FaTwitter className="social-icon" onClick={handleTwitter} aria-label="Twitter"/>
+          <FaGithub className="social-icon" onClick={handleGithub} aria-label="GitHub"/>
+        </div>
       </div>
-
-      <div className="tabs">
-        <a className="tab" href="#home">Home</a>
-        <a className="tab" href="#skills">Skills</a>
-        <a className="tab" href="#projects">Projects</a>
-        <a className="tab" href="#footer">Contact</a>
-      </div>
-
-      <div className="icons">
-        <FaLinkedin className="icon" onClick={handleLinkedin}/>
-        <FaTwitter className="icon" onClick={handleTwitter}/>
-        <FaGithub className="icon" onClick={handleGithub}/>
-      </div>
-
-    </div>
+    </header>
   );
 }
 

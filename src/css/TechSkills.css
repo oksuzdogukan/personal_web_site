@@ -1,48 +1,68 @@
-#skills {
-    scroll-margin-top: 30px;
+.skills-section {
+    padding: 80px 0;
+    background-color: transparent;
 }
-.tech-skills{
-    font-family: 'Poppins';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
-.skills-title{
-    width: 90%;
-    height: 50px;
-    font-size: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(23, 21, 70, 0.62);
-    border-radius: 20px;
-}
-.skills{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 40px;
-    margin-top: 30px;
-    padding: 0;
-}
-.skill{
-    width: 100px;
-    height: 100px;
-    background-color: #DAD8D8;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-}
-.skill img {
-    width: 55px;
-    height: 55px;
-    display: block;
-}
-.skill h5{
-    margin-top: 5px;
-    font-size: 16px;
+
+.section-title {
     text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+}
+
+.section-title p {
+    color: var(--color-text-muted);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--hover-color);
+    box-shadow: 0 10px 30px -10px var(--hover-color);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
 }

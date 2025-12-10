@@ -1,40 +1,94 @@
+
 .header {
-  background-color: rgba(21, 23, 66, 0.86);
-  height: 60px;
-  width: 90%;
-  margin: 30px  auto 0;
-  border-radius: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Poppins";
-}
-.header-title {
-  margin-left: 40px;
-  cursor: pointer;
-}
-.header-title h1 {
-  font-size: 28px;
-  font-weight: 500;
-} 
-.tabs {
-  display: flex;
-  gap: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 1.5rem 0;
+    background: transparent;
 }
 
-
-
-
-.icons {
-  margin-right: 40px;
-  display: flex;
-  gap: 1rem;
+.header.scrolled {
+    padding: 1rem 0;
+    background: var(--color-bg-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
 }
-.icon{
-    font-size: 25px;
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo h1 {
+    font-size: 1.8rem;
     cursor: pointer;
-    transition: all 0.3s;
+    color: var(--color-text-main);
+    margin: 0;
 }
-.icon:hover{
-    color: #444ab2;
+
+.header-logo span {
+    color: var(--color-primary);
+}
+
+.header-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-text-muted);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.header-socials {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        display: none; /* Mobile menu to be implemented if needed, simple hide for now to prevent break */
+    }
 }
