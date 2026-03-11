@@ -1,1 +1,4 @@
-/* Global styles are now in index.css */
+/* App.css */
+.App {
+  min-height: 100vh;
+}

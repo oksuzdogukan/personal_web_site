@@ -1,21 +1,65 @@
 .projects-section {
-    padding: 100px 0;
+  padding: 120px 0;
+  position: relative;
 }
 
+.projects-section::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--color-secondary), transparent);
+  opacity: 0.4;
+}
+
+/* ===== GRID ===== */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.loading, .no-projects {
-    text-align: center;
-    color: var(--color-text-muted);
-    font-size: 1.2rem;
-    padding: 3rem;
+/* ===== SKELETON LOADER ===== */
+.project-skeleton {
+  height: 240px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.07) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border: 1px solid var(--color-border);
 }
 
+/* ===== SEE MORE ===== */
 .see-more {
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.no-projects {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  padding: 4rem;
+  grid-column: 1 / -1;
+}
+
+/* ===== CARD ENTRANCE ANIMATION ===== */
+.projects-section.visible .project-card {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) var(--card-delay, 0s) both;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
